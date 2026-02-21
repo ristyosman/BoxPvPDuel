@@ -1,0 +1,20 @@
+name: Plugin Derle
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JDK 21 Kur
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+      - name: Maven ile Derle
+        run: mvn clean package
+      - name: Dosyayi Yukle
+        uses: actions/upload-artifact@v4
+        with:
+          name: BoxPvPDuel-Plugin
+          path: target/*.jar
