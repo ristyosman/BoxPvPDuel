@@ -1,0 +1,13 @@
+name: BoxPvPDuel
+version: 1.0
+main: com.avenor.duel.BoxPvPDuel
+api-version: '1.21'
+commands:
+  arena:
+    description: Arena yonetim komutu
+  duello:
+    description: Oyuncuya duello teklif eder
+  kabul:
+    description: Duello teklifini kabul eder
+  duelsandik:
+    description: Loot sandigini tekrar acar
